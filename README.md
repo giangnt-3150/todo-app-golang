@@ -7,7 +7,7 @@ Make sure your development enviroment meets the following requirements:
 
 ## Running with docker
 
-clone the [todo app](git@github.com:giangnt-3150/todo-app-golang.git) repository.
+clone the [todo-app](https://github.com/giangnt-3150/todo-app-golang) repository.
 
 ```sh
 docker-compose up -d
