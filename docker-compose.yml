@@ -1,0 +1,25 @@
+version: '3.3'
+
+services:
+  golang:
+    image: golang:1.16
+    entrypoint: /bin/sh
+    tty: true
+    volumes:
+      - .:/go/src
+    ports:
+      - 8080:8080
+    working_dir: /go/src
+
+  mysql:
+    image: mysql:8
+    restart: always
+    volumes:
+      - .data/mysql:/var/lib/mysql
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_DATABASE: todoapp
+      MYSQL_USER: todoapp
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
